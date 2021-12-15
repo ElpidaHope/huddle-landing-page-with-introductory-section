@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+html{
+    background-color: var(--Violet);
+    padding: 25px;
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+}
+
+header img{
+    width: 130px;
+    max-width: 100%;
+}
+
+header{
+    margin-bottom: 60px;
+}
+
+.container img{
+    width: 315px;
+    height: 220px;
+}
+
+.picture{
+    margin-bottom: 60px;
+}
+
+.introduction{
+    color: white;
+    text-align: center;
+}
+
+.introduction h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.7rem;
+    padding: 10px;
+}
+
+.introduction p{
+    font-family:'Open Sans';
+    line-height: 1.5;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.button{
+    background-color: white;
+    color: var(--Violet);
+    padding: 15px 30px;
+    margin: 15px auto;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    font-weight: 400;
+}
+
+.button:hover{
+    background-color: var(--soft-magenta);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+li{
+    margin-right: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+li:nth-of-type(2):hover{
+    cursor: pointer;
+    color: var(--soft-magenta);
+    border: 2px solid var(--soft-magenta);
+    transition: 0.5s ease-in-out;
+}
+
+@media(min-width:900px){
+    html{
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 80px;
+        height: 100vh;
+
+    }
+
+    header img{
+        width: 220px;
+    }
+
+    header{
+        margin-bottom: 70px;
+    }
+
+    .container{
+        display: flex;
+    }
+
+    .picture{
+        width: 62%;
+        margin-right: 40px;
+    }
+
+    .picture img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .introduction{
+        width: 38%;
+        margin-top: 20px;
+    }
+
+    .introduction h1{
+        padding: 20px 0 10px;
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .introduction p{
+        text-align: left;
+        padding: 0 10px 0 0;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .button{
+        margin: 15px 0;
+        width: 35%;
+        font-size: 1.5rem;
+    }
+
+    ul{
+        justify-content: flex-end;
+        margin: 0;
+        transform: translateX(100px);
+        transform: translateY(-30px);
+    }
+}
